@@ -16,7 +16,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative h-[calc(100vh-3.5rem)] w-full">
+    <section className="relative h-[calc(100vh-5rem)] w-full">
       <Image
         src="https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/ABBA.jpg"
         alt="Mulher sorrindo enquanto faz um exercício de fisioterapia com um profissional."
@@ -36,7 +36,7 @@ export function Hero() {
             devolver seu movimento.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button asChild size="lg" className="font-bold">
+            <Button asChild size="lg" className="font-bold bg-accent text-accent-foreground hover:bg-accent/90">
               <Link
                 href="https://wa.me/5562986025326"
                 target="_blank"

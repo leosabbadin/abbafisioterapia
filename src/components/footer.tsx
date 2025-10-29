@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Mail, MapPin } from 'lucide-react';
 
 const WhatsAppIconSvg = (props: React.SVGProps<SVGSVGElement>) => (
@@ -17,25 +18,34 @@ const InstagramIconSvg = (props: React.SVGProps<SVGSVGElement>) => (
 
 export function Footer() {
   return (
-    <footer className="bg-muted/50">
+    <footer className="bg-primary text-primary-foreground">
       <div className="container py-12">
-        <div className="text-center">
-            <h2 className="font-headline text-3xl font-bold md:text-4xl">
+        <div className="flex flex-col items-center text-center gap-4">
+          <Link href="/" className="flex items-center gap-2 font-bold">
+            <Image
+              src="https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/Screenshot%20(31)%20(1).png"
+              alt="Abba Fisioterapia Logo"
+              width={100}
+              height={100}
+              className="h-auto"
+            />
+          </Link>
+          <h2 className="font-headline text-3xl font-bold md:text-4xl">
             Visite-nos e sinta a diferença
-            </h2>
+          </h2>
         </div>
         <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-2">
             <div className="flex flex-col gap-4">
                 <h3 className="font-headline text-xl font-bold">Informações de Contato</h3>
-                <a href="https://wa.me/5562986025326" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-primary transition-colors">
+                <a href="https://wa.me/5562986025326" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-accent transition-colors">
                     <WhatsAppIconSvg className="h-5 w-5 flex-shrink-0 fill-current" />
                     <span className="font-medium">(62) 9 8602-5326</span>
                 </a>
-                <a href="mailto:abbafisioterapia@gmail.com" className="flex items-center gap-3 hover:text-primary transition-colors">
+                <a href="mailto:abbafisioterapia@gmail.com" className="flex items-center gap-3 hover:text-accent transition-colors">
                     <Mail className="h-5 w-5 flex-shrink-0" />
                     <span className="font-medium">abbafisioterapia@gmail.com</span>
                 </a>
-                <a href="https://www.instagram.com/abba_fisioterapia" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-primary transition-colors">
+                <a href="https://www.instagram.com/abba_fisioterapia" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-accent transition-colors">
                     <InstagramIconSvg className="h-5 w-5 flex-shrink-0 fill-current" />
                     <span className="font-medium">@abba_fisioterapia</span>
                 </a>
@@ -44,7 +54,7 @@ export function Footer() {
                     <span className="font-medium">Avenida Ipanema, N. 684, Qd.03, Lt.14-Sala 01, Jardim Atlântico, Goiânia/GO</span>
                 </div>
             </div>
-            <div className="h-full min-h-[300px] w-full overflow-hidden rounded-lg border">
+            <div id="localizacao" className="h-full min-h-[300px] w-full overflow-hidden rounded-lg border scroll-mt-20">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.1438914616256!2d-49.297316925911466!3d-16.71986891901867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef7402685cb5b%3A0x28f74233e5c9893!2sAv.%20Ipanema%2C%20684%20-%20Jardim%20Atl%C3%A2ntico%2C%20Goi%C3%A2nia%20-%20GO%2C%2074343-010%2C%20Brazil!5e0!3m2!1sen!2s!4v1683833917457!5m2!1sen!2s"
                     width="100%"
@@ -57,7 +67,7 @@ export function Footer() {
                 ></iframe>
             </div>
         </div>
-        <div className="mt-12 border-t pt-6 text-center text-sm text-muted-foreground">
+        <div className="mt-12 border-t pt-6 text-center text-sm text-muted-foreground/80">
             <p>&copy; {new Date().getFullYear()} Abba Fisioterapia. Todos os direitos reservados.</p>
         </div>
       </div>
