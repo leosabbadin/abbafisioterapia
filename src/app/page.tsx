@@ -1,6 +1,5 @@
 import { Header } from '@/components/header';
 import { Hero } from '@/components/hero';
-import { PainPoints } from '@/components/pain-points';
 import { Services } from '@/components/services';
 import { Method } from '@/components/method';
 import { FinalCta } from '@/components/final-cta';
@@ -12,7 +11,6 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <PainPoints />
         <Services />
         <Method />
         <FinalCta />

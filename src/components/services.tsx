@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Stethoscope, HeartPulse, FilePlus2, Trophy, Hand, Bone, PersonStanding } from 'lucide-react';
+import Image from 'next/image';
 
 const PilatesIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -20,11 +21,13 @@ const servicesList = [
         icon: <Stethoscope className="h-8 w-8 text-primary" />,
         title: "Fisioterapia Especializada",
         description: "Avaliação precisa e tratamento focado na recuperação funcional de traumas ortopédicos e disfunções.",
+        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/Fisioterapia%20preventiva%20.jpg"
     },
     {
         icon: <HeartPulse className="h-8 w-8 text-primary" />,
         title: "Dores Crônicas e Agudas",
         description: "Abordagem terapêutica para o tratamento de condições agudas e crônicas, visando o alívio da dor e a restauração do seu bem-estar.",
+        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/IMG_1749.jpg"
     },
     {
         icon: <FilePlus2 className="h-8 w-8 text-primary" />,
@@ -35,6 +38,7 @@ const servicesList = [
         icon: <Trophy className="h-8 w-8 text-primary" />,
         title: "Fisioterapia Esportiva",
         description: "Foco na prevenção de lesões, reabilitação acelerada e otimização da performance de atletas, do amador ao profissional.",
+        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/IMG_1759.jpg"
     },
     {
         icon: <Hand className="h-8 w-8 text-primary" />,
@@ -72,11 +76,17 @@ export function Services() {
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {servicesList.map((service) => (
-            <Card key={service.title} className="flex flex-col transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-              <CardHeader className="items-center pt-8">
-                {service.icon}
-              </CardHeader>
-              <CardContent className="flex flex-1 flex-col items-center gap-2 text-center">
+            <Card key={service.title} className="flex flex-col overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+              {service.imageUrl ? (
+                <div className="relative h-48 w-full">
+                  <Image src={service.imageUrl} alt={service.title} layout="fill" className="object-cover" />
+                </div>
+              ) : (
+                <CardHeader className="items-center pt-8">
+                  {service.icon}
+                </CardHeader>
+              )}
+              <CardContent className="flex flex-1 flex-col items-center gap-2 text-center p-6">
                 <CardTitle className="font-headline text-xl font-semibold">{service.title}</CardTitle>
                 <p className="text-muted-foreground flex-1">{service.description}</p>
               </CardContent>
