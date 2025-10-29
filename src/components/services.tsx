@@ -21,13 +21,13 @@ const servicesList = [
         icon: <Stethoscope className="h-8 w-8 text-primary" />,
         title: "Fisioterapia Especializada",
         description: "Avaliação precisa e tratamento focado na recuperação funcional de traumas ortopédicos e disfunções.",
-        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/Fisioterapia%20preventiva%20.jpg"
+        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/Fisioterapia%20preventiva%20.jpg?raw=true"
     },
     {
         icon: <HeartPulse className="h-8 w-8 text-primary" />,
         title: "Dores Crônicas e Agudas",
         description: "Abordagem terapêutica para o tratamento de condições agudas e crônicas, visando o alívio da dor e a restauração do seu bem-estar.",
-        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/IMG_1749.jpg"
+        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/IMG_1749.jpg?raw=true"
     },
     {
         icon: <FilePlus2 className="h-8 w-8 text-primary" />,
@@ -38,7 +38,7 @@ const servicesList = [
         icon: <Trophy className="h-8 w-8 text-primary" />,
         title: "Fisioterapia Esportiva",
         description: "Foco na prevenção de lesões, reabilitação acelerada e otimização da performance de atletas, do amador ao profissional.",
-        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/IMG_1759.jpg"
+        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/IMG_1759.jpg?raw=true"
     },
     {
         icon: <Hand className="h-8 w-8 text-primary" />,
@@ -78,7 +78,7 @@ export function Services() {
           {servicesList.map((service) => (
             <Card key={service.title} className="flex flex-col overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
               {service.imageUrl ? (
-                <div className="relative h-56 w-full">
+                <div className="relative h-64 w-full">
                   <Image src={service.imageUrl} alt={service.title} fill className="object-cover" />
                 </div>
               ) : (
