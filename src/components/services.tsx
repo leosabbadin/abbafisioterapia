@@ -45,6 +45,7 @@ const servicesList = [
         icon: <Hand className="h-8 w-8 text-primary" />,
         title: "Osteopatia",
         description: "Terapia manual que investiga e trata a causa raiz da dor, buscando reequilibrar o corpo de forma integrada.",
+        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagemclinicaabba/eb101ea98fd09d143313fa2f8804989323ab20b7/WhatsApp%20Image%202025-10-28%20at%2014.22.58%20(1).jpeg",
     },
     {
         icon: <Bone className="h-8 w-8 text-primary" />,
