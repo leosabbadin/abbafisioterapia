@@ -21,24 +21,25 @@ const servicesList = [
         icon: <Stethoscope className="h-8 w-8 text-primary" />,
         title: "Fisioterapia Especializada",
         description: "Avaliação precisa e tratamento focado na recuperação funcional de traumas ortopédicos e disfunções.",
-        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/Fisioterapia%20preventiva%20.jpg?raw=true"
+        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/Fisioterapia%20preventiva%20.jpg"
     },
     {
         icon: <HeartPulse className="h-8 w-8 text-primary" />,
         title: "Dores Crônicas e Agudas",
         description: "Abordagem terapêutica para o tratamento de condições agudas e crônicas, visando o alívio da dor e a restauração do seu bem-estar.",
-        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/IMG_1749.jpg?raw=true"
+        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/IMG_1749.jpg"
     },
     {
         icon: <FilePlus2 className="h-8 w-8 text-primary" />,
         title: "Fisioterapia no Pré e Pós-Operatório",
         description: "Acompanhamento completo, da avaliação à alta, para acelerar a recuperação funcional de cirurgias de coluna, joelho, ombro e mais.",
+        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/WhatsApp%20Image%202025-10-27%20at%2016.34.36.jpeg",
     },
     {
         icon: <Trophy className="h-8 w-8 text-primary" />,
         title: "Fisioterapia Esportiva",
         description: "Foco na prevenção de lesões, reabilitação acelerada e otimização da performance de atletas, do amador ao profissional.",
-        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/IMG_1759.jpg?raw=true"
+        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/IMG_1759.jpg"
     },
     {
         icon: <Hand className="h-8 w-8 text-primary" />,
@@ -49,16 +50,19 @@ const servicesList = [
         icon: <Bone className="h-8 w-8 text-primary" />,
         title: "Quiropraxia",
         description: "Ajustes precisos na coluna e articulações para alívio imediato da dor e correção de desalinhamentos.",
+        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/WhatsApp%20Image%202025-10-27%20at%2015.21.16.jpeg",
     },
     {
         icon: <PersonStanding className="h-8 w-8 text-primary" />,
         title: "RPG (Reeducação Postural Global)",
         description: "Método de correção postural que trata desequilíbrios musculares de forma global, aliviando dores estruturais.",
+        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/WhatsApp%20Image%202025-10-27%20at%2017.13.20.jpeg",
     },
     {
         icon: <PilatesIcon className="h-8 w-8 text-primary" />,
         title: "Pilates",
         description: "Foco no fortalecimento do core, flexibilidade e controle corporal para bem-estar e qualidade de vida.",
+        imageUrl: "https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/WhatsApp%20Image%202025-10-27%20at%2015.22.37%20(1).jpeg",
     },
 ];
 
@@ -78,7 +82,7 @@ export function Services() {
           {servicesList.map((service) => (
             <Card key={service.title} className="flex flex-col overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
               {service.imageUrl ? (
-                <div className="relative h-80 w-full">
+                <div className="relative h-96 w-full">
                   <Image src={service.imageUrl} alt={service.title} fill className="object-cover" />
                 </div>
               ) : (
