@@ -26,8 +26,8 @@ export function Method() {
   return (
     <section className="bg-muted/50 py-16 sm:py-24">
       <div className="container">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="flex flex-col gap-6 text-center md:text-left">
+        <div className="grid md:grid-cols-2 gap-12 items-stretch">
+            <div className="flex flex-col gap-6 text-center md:text-left justify-center">
               <h2 className="font-headline text-3xl font-bold md:text-4xl">
                 Mais que Fisioterapia. Um Cuidado que Acolhe.
               </h2>
@@ -55,7 +55,7 @@ export function Method() {
                   </Link>
                 </Button>
             </div>
-            <div className="relative aspect-square w-full h-auto">
+            <div className="relative w-full h-auto min-h-[300px] md:min-h-full">
                 <Image
                     src="https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/WhatsApp%20Image%202025-10-28%20at%2010.16.36.jpeg"
                     alt="Equipe Abba Fisioterapia"
