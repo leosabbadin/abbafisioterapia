@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Stethoscope, HeartPulse, FilePlus2, Trophy, Hand, Bone, PersonStanding } from 'lucide-react';
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const PilatesIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -97,6 +99,17 @@ export function Services() {
               </CardContent>
             </Card>
           ))}
+        </div>
+        <div className="mt-12 text-center">
+            <Button asChild size="lg" className="h-12 px-8 font-bold text-base">
+                <Link
+                href="https://wa.me/5562986025326"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                Agende sua Avaliação
+                </Link>
+            </Button>
         </div>
       </div>
     </section>

@@ -5,6 +5,7 @@ import { Method } from '@/components/method';
 import { Testimonials } from '@/components/testimonials';
 import { FinalCta } from '@/components/final-cta';
 import { Footer } from '@/components/footer';
+import { WhatsAppFab } from '@/components/whatsapp-fab';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <FinalCta />
       </main>
       <Footer />
+      <WhatsAppFab />
     </div>
   );
 }
