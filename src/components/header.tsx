@@ -28,7 +28,7 @@ export function Header() {
   const navLinks = (
     <>
       <Button variant="link" asChild className="text-primary-foreground hover:text-accent transition-colors text-base">
-          <Link href="#servicos" onClick={handleScroll}>Serviços</Link>
+          <Link href="#servicos" onClick={handleScroll}>Tratamentos</Link>
       </Button>
       <Button variant="link" asChild className="text-primary-foreground hover:text-accent transition-colors text-base">
           <Link href="#depoimentos" onClick={handleScroll}>Depoimentos</Link>
