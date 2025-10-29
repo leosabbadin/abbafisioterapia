@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
-import Script from 'next/script'; // <-- 1. IMPORTADO O COMPONENTE DE SCRIPT
+import Script from 'next/script'; // <-- 1. IMPORTADO O COMPONENTE NATIVO
 
 export const metadata: Metadata = {
   title: 'Abba Fisioterapia Integrada',
@@ -19,27 +19,35 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-      </head>
-      <body className="font-body antialiased">
-        {children}
-        <Toaster />
 
-        {/* -- TAGS DO GOOGLE ADICIONADAS AQUI -- */}
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17371593025"
-          strategy="afterInteractive" 
-        />
-        <Script id="google-ads-config" strategy="afterInteractive">
+        {/* 2. CÓDIGO DO GTM (HEAD) ADICIONADO AQUI */}
+        <Script id="google-tag-manager-head" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-17371593025');
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-PVFWJVHR');
           `}
         </Script>
-        {/* -- FIM DAS TAGS DO GOOGLE -- */}
+        {/* FIM DO GTM (HEAD) */}
+      </head>
+
+      <body className="font-body antialiased">
         
+        {/* 3. CÓDIGO DO GTM (NOSCRIPT) ADICIONADO AQUI */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PVFWJVHR"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
+        {/* FIM DO GTM (NOSCRIPT) */}
+
+        {children}
+        <Toaster />
       </body>
     </html>
   );
