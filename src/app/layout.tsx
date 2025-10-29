@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Abba Fisioterapia Digital',
+  title: 'Abba Fisioterapia Integrada',
   description: 'Chega de Viver com Limitações. Encontre alívio para sua dor e recupere seu movimento com nossa equipe de especialistas.',
 };
 
