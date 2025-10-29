@@ -1,4 +1,5 @@
 import { Search, HeartHandshake, Medal } from 'lucide-react';
+import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const methodPoints = [
@@ -24,15 +25,25 @@ export function Method() {
   return (
     <section className="bg-muted/50 py-16 sm:py-24">
       <div className="container">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="font-headline text-3xl font-bold md:text-4xl">
-            Mais que Fisioterapia. Um Cuidado que Acolhe.
-          </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
-            {text}
-          </p>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-center md:text-left">
+              <h2 className="font-headline text-3xl font-bold md:text-4xl">
+                Mais que Fisioterapia. Um Cuidado que Acolhe.
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                {text}
+              </p>
+            </div>
+            <div className="relative aspect-video w-full">
+                <Image 
+                    src="https://raw.githubusercontent.com/leosabbadin/imagem-abba/593d08e00bbd17757eb8206804b9a41a6afa60e9/WhatsApp%20Image%202025-10-28%20at%2010.16.36.jpeg"
+                    alt="Equipe Abba Fisioterapia"
+                    fill
+                    className="object-cover rounded-lg shadow-lg"
+                />
+            </div>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
           {methodPoints.map((point) => (
             <Card key={point.title} className="border-2 border-primary/10 bg-card shadow-lg">
               <CardHeader className="items-center pt-8">
