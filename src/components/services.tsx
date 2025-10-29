@@ -78,7 +78,7 @@ export function Services() {
           {servicesList.map((service) => (
             <Card key={service.title} className="flex flex-col overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
               {service.imageUrl ? (
-                <div className="relative h-64 w-full">
+                <div className="relative h-80 w-full">
                   <Image src={service.imageUrl} alt={service.title} fill className="object-cover" />
                 </div>
               ) : (
