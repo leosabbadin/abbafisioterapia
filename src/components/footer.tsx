@@ -37,7 +37,7 @@ export function Footer() {
         <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-2">
             <div className="flex flex-col gap-4">
                 <h3 className="font-headline text-xl font-bold">Informações de Contato</h3>
-                <a href="https://wa.me/5562986025326" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-accent transition-colors">
+                <a href="https://wa.me/5562986025326?text=Ol%C3%A1%2C%20vim%20do%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-accent transition-colors">
                     <WhatsAppIconSvg className="h-5 w-5 flex-shrink-0 fill-current" />
                     <span className="font-medium">(62) 9 8602-5326</span>
                 </a>

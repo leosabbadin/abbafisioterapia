@@ -38,7 +38,7 @@ export function Hero() {
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg" className="font-bold bg-accent text-accent-foreground hover:bg-accent/90">
               <Link
-                href="https://wa.me/5562986025326"
+                href="https://wa.me/5562986025326?text=Ol%C3%A1%2C%20vim%20do%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
                 target="_blank"
                 rel="noopener noreferrer"
               >

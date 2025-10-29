@@ -14,7 +14,7 @@ export function FinalCta() {
         </p>
         <Button asChild size="lg" className="mt-8 h-12 px-8 font-bold text-base">
           <Link
-            href="https://wa.me/5562986025326"
+            href="https://wa.me/5562986025326?text=Ol%C3%A1%2C%20vim%20do%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
             target="_blank"
             rel="noopener noreferrer"
           >
