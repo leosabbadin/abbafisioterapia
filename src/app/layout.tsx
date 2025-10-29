@@ -1,6 +1,7 @@
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
 import './globals.css';
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "@/components/ui/toaster";
+import Script from 'next/script'; // <-- 1. IMPORTADO O COMPONENTE DE SCRIPT
 
 export const metadata: Metadata = {
   title: 'Abba Fisioterapia Integrada',
@@ -22,6 +23,23 @@ export default function RootLayout({
       <body className="font-body antialiased">
         {children}
         <Toaster />
+
+        {/* -- TAGS DO GOOGLE ADICIONADAS AQUI -- */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17371593025"
+          strategy="afterInteractive" 
+        />
+        <Script id="google-ads-config" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17371593025');
+          `}
+        </Script>
+        {/* -- FIM DAS TAGS DO GOOGLE -- */}
+        
       </body>
     </html>
   );
