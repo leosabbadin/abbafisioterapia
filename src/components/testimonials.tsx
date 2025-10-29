@@ -11,8 +11,8 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const testimonials = [
   {
-    name: 'Léo Sabbadin',
-    initials: 'LS',
+    name: 'Marcos Vinicius',
+    initials: 'MV',
     quote: 'Excelente atendimento!! Local muito bem estruturado e profissionais incríveis. Recomendo demais!!',
   },
   {
