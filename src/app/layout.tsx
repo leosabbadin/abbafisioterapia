@@ -42,7 +42,6 @@ export default function RootLayout({
       </head>
 
       <body className="font-body antialiased">
-        
         {/* 3. CÓDIGO DO GTM (NOSCRIPT) ADICIONADO AQUI */}
         <noscript>
           <iframe
