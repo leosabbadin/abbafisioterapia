@@ -42,6 +42,8 @@ export default function RootLayout({
       </head>
 
       <body className="font-body antialiased">
+        {children}
+
         {/* 3. CÓDIGO DO GTM (NOSCRIPT) ADICIONADO AQUI */}
         <noscript>
           <iframe
@@ -53,7 +55,6 @@ export default function RootLayout({
         </noscript>
         {/* FIM DO GTM (NOSCRIPT) */}
 
-        {children}
         <Toaster />
       </body>
     </html>
